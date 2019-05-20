@@ -33,7 +33,7 @@ group by i.InvoiceId
 order by LineItems desc;
 
 --24
-select
+select top 1
 t.Name, count(il.TrackId) AS Total
 from Invoice i
 join InvoiceLine il on il.InvoiceId = i.InvoiceId
